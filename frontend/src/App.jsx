@@ -36,7 +36,7 @@ const SyntaxHighlightedJson = ({ data }) => {
 };
 
 function App() {
-  const [inputVal, setInputVal] = useState('[\n  "A->B",\n  "A->C",\n  "B->D"\n]');
+  const [inputVal, setInputVal] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
@@ -130,7 +130,7 @@ function App() {
                 className="form-control"
                 value={inputVal}
                 onChange={(e) => setInputVal(e.target.value)}
-                placeholder='["A->B", "A->C"]'
+                placeholder='Enter your graph here...'
               />
             </div>
             <button type="submit" className="btn btn-primary" disabled={loading}>
