@@ -130,15 +130,15 @@ npm run dev
 * Add environment variable:
 
 ```
-VITE_API_URL=https://your-api.onrender.com/bfhl
+VITE_API_URL=https://srihari-bfhl.onrender.com/bfhl
 ```
 
 ---
 
 ## Live Links
 
-Frontend: https://your-frontend.vercel.app
-Backend API: https://your-api.onrender.com/bfhl
+Frontend: https://bajaj-b52e.vercel.app/
+Backend API: https://srihari-bfhl.onrender.com/bfhl
 
 ---
 
