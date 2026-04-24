@@ -82,8 +82,13 @@ function App() {
 
     setLoading(true);
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000/bfhl';
-      const response = await axios.post(apiUrl, { data: parsedData });
+      let baseApiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      // Automatically append the endpoint if the user provided only the Base URL
+      if (!baseApiUrl.endsWith('/bfhl')) {
+        baseApiUrl += baseApiUrl.endsWith('/') ? 'bfhl' : '/bfhl';
+      }
+      
+      const response = await axios.post(baseApiUrl, { data: parsedData });
       setResult(response.data);
     } catch (err) {
        setError(err.response?.data?.message || err.message || 'Unable to connect to the backend API.');
